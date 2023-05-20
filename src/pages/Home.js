@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Container, Header, Icon, Segment } from 'semantic-ui-react'
+import { Button, Container, Grid, Header, Icon, Segment, Image } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 //import { useAuth0 } from "@auth0/auth0-react";
@@ -17,32 +17,31 @@ class Home extends Component {
   }
 
 
+  componentDidMount() {
+    document.body.style.background = "linear-gradient(to right,  rgba(69,102,249,1) 0%,rgba(68,244,241,1) 100%)";
+  }
 
 
 
   render() {
 
-    const styleContainer = {
-      width: '100%',
-      height: '100vh', 
-      background: "linear-gradient(to right,  rgba(69,102,249,1) 0%,rgba(68,244,241,1) 100%)"
-
-
-    }
-
 
     return (
+
       <>
-      <div style={styleContainer}>
-      
-    
         <Navbar />
 
-        
-        
+        <Grid columns={2} divided style={{ height: '100vh' }}>
+          <Grid.Column>
+            
 
-        <Button as={Link} to="/menu" primary>Click Here</Button>
-        </div>
+          </Grid.Column>
+          <Grid.Column verticalAlign='middle' style={{ backgroundColor: 'white', height: '65vh', padding: '0px 0px 0px 15%' }}>
+
+          </Grid.Column>
+        </Grid>
+
+
       </>
     );
 
